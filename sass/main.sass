@@ -1,0 +1,1454 @@
+@import "bourbon"
+@import "template"
+@import "vars"
+@import "libs"
+@import "mixins"
+
+// #content
+#content
+	margin-left: 12.5em
+	width: auto
+	+sml(max-w)
+		margin-left: 0
+	.grids
+		p
+			text-align: center
+			font-size: 1.2em
+			strong
+				border-top: .1vw solid $white
+				display: block
+				padding-top: 1em
+				margin-bottom: .5em
+				text-transform: uppercase
+				font-family: $p-r
+				font-size: 1.1em
+			span
+				border-bottom: .1vw solid $white
+				display: block
+				padding-bottom: 1em
+				font-family: $p-xt
+				font-size: 0.8em
+				line-height: 1.3
+			img
+				width: 10em
+				opacity: 1
+				display: inline-block
+		figure
+			+sml(max-w)
+				width: 100%
+				img
+					-webkit-transform: scale(1.14);
+					transform: scale(1.14);
+				&:hover
+					img
+						-webkit-transform: scale(1.4);
+						transform: scale(1.4);
+//-end #content	
+
+// footer
+.footer
+	padding-top: 1em 
+	padding-bottom: 1.5em 
+	margin-bottom: -1.5em
+	background: url("../img/menu_bg.jpg") repeat
+	+sm(min-w)
+		display: none
+	+sml(max-w)
+		font-size: 5vw
+	.copyright
+		margin-bottom: 0
+//-end footer
+
+// panel
+.panel
+
+	+lg(min-w)
+			font-size: 0.835vw
+	+sml(max-w)
+		font-size: 2.5vw
+	h1
+		color: $white
+		font-family: $o-sb
+		font-size: 2.25em
+		margin: 1em 0 0.7em
+	h2
+		font-family: $o-sb
+		color: $black
+		font-size: 2.125em
+	&-promotion
+		.container-fluid
+			width: 97%
+	&-title
+		background: url('../img/main_bg.jpg') repeat-y top center
+		background-size: 100%
+		background-attachment: fixed
+		padding: 0.6em 0 0.6em 0
+		// +cover-background('../img/main_bg.jpg',top,left)
+		.container-fluid
+			padding-left: 2.5em
+		+md(max-w)
+			font-size: 1.5vw
+	&-subcontain
+		.container-fluid
+			width: 77.3%
+			margin: 0 auto
+			+md(max-w)
+				width: 100%
+	&-other
+		+cover-background('../img/panelbg1.png',top,center)
+		text-align: center
+		h1
+			font-family: $o-l
+			font-size: 2.75em
+			line-height: 1.4
+	&-carousel1
+	&-reviews
+		background-color: $gray-t
+		padding-bottom: 2.4em
+		+md(max-w)
+			font-size: 1.15vw
+		+sml(max-w)
+			font-size: 2.9vw
+		.line-title
+			+sm(max-w)
+				font-size: 17px
+			+sml(max-w)
+				font-size: 2.5vw
+	&-request
+		background: url('../img/request_bg.png') repeat #fff
+		margin-bottom: -1.5em
+		padding-bottom: 5em
+	&-tile
+		+md(max-w)
+			font-size: 1.4vw
+		+sml(max-w)
+			font-size: 2.5vw
+//-end panel
+
+// line
+.line
+	&-allwork
+		+md(max-w)
+			font-size: 0.8vw
+			width: 100%
+		+sm(max-w)
+			font-size: 1.2vw
+		+sml(max-w)
+			font-size: 2.5vw
+		.container-fluid
+			width: 95%
+			+md(max-w)
+				width: 100%
+	&-work
+		background: url('../img/request_bg.png') repeat #fff
+		padding: 3em 0
+		margin-bottom: 3em
+		+md(max-w)
+			font-size: 0.8vw
+			width: 100%
+		+sm(max-w)
+			font-size: 1.2vw
+		+sml(max-w)
+			font-size: 2.5vw
+		.container-fluid
+			width: 95%
+			+md(max-w)
+				width: 100%
+	&-calculator
+		margin-bottom: 3em
+		+md(max-w)
+			font-size: 0.8vw
+			width: 100%
+		+sm(max-w)
+			font-size: 0.9vw
+		+sml(max-w)
+			font-size: 2.5vw
+	&-yet
+		width: 90%
+		margin: 0 auto
+		+md(max-w)
+			font-size: 1vw
+			width: 100%
+		+sm(max-w)
+			font-size: 1.05vw
+		+sml(max-w)
+			font-size: 2.5vw
+	&-partner
+	&-rates
+		margin-bottom: 2.5em
+		+md(max-w)
+			font-size: 1vw
+		+sm(max-w)
+			font-size: 0.85vw
+		+sml(max-w)
+			font-size: 2.5vw
+	&-what
+		margin-bottom: 2em
+		+md(max-w)
+			font-size: 1.2vw
+		+sm(max-w)
+			font-size: 1.3vw
+		+sml(max-w)
+			font-size: 2.5vw
+	&-mission
+		margin: 1.5em 0 4.1em
+		+cfx
+	&-other
+		width: 65%
+		margin: 8.8em auto 10em
+		+md(max-w)
+			width: 100%
+	&-title1
+		padding: 3em 0 2em
+		h2
+			margin-bottom: 0.3em
+			font-size: 1.625em
+	&-title2
+		padding: 3.6em 0 2em
+		h2
+			color: $white
+			margin-bottom: 0.3em
+			font-size: 1.625em
+	&-title
+		text-align: center
+		padding: 3em 0 2em
+		h2
+			margin-bottom: 0.3em
+		p
+			font-family: $p-xt
+			font-size: 1em
+
+	&-slider
+		position: relative
+		width: 50%
+		margin: 0 auto 2.6em
+		+md(max-w)
+			width: 90%
+		+sm(max-w)
+			width: 100%
+	&-reviews
+		width: 61.5em
+		margin: 0 auto
+		+md(max-w)
+			width: 62em
+		+sm(max-w)
+			width: 100%
+	&-clients
+		margin: -1em 0 3em
+	&-advantages
+	&-promotion
+		text-align: center
+		h2
+			font-size: 2.5em
+			margin: 1.5em 0
+			strong
+				display: block
+			span
+				font-size: 0.6em
+				display: block
+				margin-top: 1em
+				font-family: $o-l
+		.white
+			color: $white
+//-end line
+.bg
+	&-one
+		+cover-background('../img/panelbg2.jpg',top,center)
+	&-two
+		+cover-background('../img/panelbg3.jpg',top,center)
+	&-three
+		background: url('../img/panelbg4.jpg') top center no-repeat
+		background-size: cover
+		background-color: $gray
+		+md(max-w)
+			background-size: 140% 
+			background-position: 43% 0
+		+sml(max-w)
+			background-size: 160% 
+			background-position: 45% 0
+	&-four
+		+cover-background('../img/panelbg5.jpg',top,center)
+	&-five
+		+cover-background('../img/panelbg6.jpg',top,center)
+	&-six
+		background-color: #eeeeee
+	&-seven
+		+cover-background('../img/panelbg7.jpg',top,center)
+.allwork
+	position: relative
+	&-btn
+		text-align: center
+	.btn
+		&-warning
+			@extend %btn
+			@extend %btn-warning
+			font-family: $o-b
+			padding: 1em 1em
+			font-size: 1.4em
+	.select
+		position: absolute
+		top: 0
+		left: 0
+		color: $white
+		width: 10em
+		+sml(max-w)
+			position: relative
+			margin: 0 auto 1.5em
+		.placeholder
+			background-color: darken($gray,15%)
+			&:hover
+				background-color: darken($gray,5%)
+.work
+	&-title
+		h3
+			font-family: $o-sb
+			font-size: 1.8em
+			text-transform: uppercase
+			margin-bottom: 1em
+			line-height: 1.1
+	&-contacts
+		margin-bottom: 2em
+		color: $black
+		p
+			font-family: $o-l
+			font-size: 1.3em
+			margin-bottom: 0.7em
+		span
+		a
+			color: #008fc4
+			+hov-a(none,$orange)
+	&-point
+		font-size: 1.1em
+		margin-bottom: 0.6em
+		color: #676767
+		+cfx
+		span
+			&:nth-child(odd)
+				float: left
+			&:nth-child(even)
+				float: right
+	&-tabs
+		max-height: 23em
+		overflow: hidden
+		&.tabs
+			+sm(max-w)
+				margin-bottom: .5em
+		li
+			display: table
+			width: 100%
+			font-family: $o-l
+			font-size: 1.2em
+			padding-left: 1em
+			padding-right: .5em
+			background-color: #fff
+			border-bottom: .12em solid lighten($gray,15%)
+			+transit
+			&:hover,&:focus
+				background-color: #e6e6e6
+			&:last-child
+				border-bottom: none
+			span
+				&:first-child
+					display: table-cell
+					vertical-align: middle
+				&:last-child
+					float: right
+			.fa-stack
+				color: color(orange,dark)
+				font-size: 1.155em
+				i
+					&:first-child
+					&:last-child
+						font-family: $default-font
+						font-size: 0.9em
+		.tab-active
+			.fa-stack
+				color: $blue
+	&-tabcontent
+		overflow: hidden
+	&-bottom
+		margin-top: 2em
+		+cfx
+		strong
+			font-family: $o-sb
+			display: block
+			color: $black
+			font-size: 1.5em
+			margin-bottom: 0.8em
+		.label
+			+br(.2em)
+			&-default
+				@extend %label
+				@extend %label-default
+				font-size: 2.7em
+				margin-right: 1.2em
+				color: $blue
+				font-family: $o-b
+				width: 5em
+				text-align: center
+				float: left
+			&-primary
+				@extend %label
+				@extend %label-primary
+				font-size: 1.5em
+				display: table
+				text-align: center
+				float: left
+				width: 12em
+				span
+					display: table-cell
+					vertical-align: middle
+					line-height: 1.32
+.calculator 
+	+sml(max-w)
+		margin-bottom: 2em
+	&-top
+		margin-bottom: 1.5em
+		+sm(max-w)
+			min-height: 3.5em
+		+sml(max-w)
+			min-height: auto
+		strong
+			font-family: $o-sb
+			font-size: 1.7em
+	&-contain
+		min-height: 18em
+		+md(max-w)
+			min-height: 20em
+		+sm(max-w)
+			min-height: 25em
+		+sml(max-w)
+			min-height: auto
+		.plusminus
+			margin: 2.4rem auto 0
+			display: block
+			+sm(max-w)
+				margin-top: 1.4rem
+			&.horiz
+				width: 14rem
+			input[type=number]
+				width: 6rem
+				text-align: center
+				font-family: $o-sb
+				font-weight: bold
+			+md(max-w)
+				&.horiz
+					width: 12rem
+					height: 3rem
+					input[type=number]
+						width: 6rem
+						height: 3rem
+						left: 3rem
+				button
+					width: 3rem
+					height: 3rem
+			+sm(max-w)
+				&.horiz
+					width: 10rem
+					height: 2.5rem
+					input[type=number]
+						width: 5rem
+						height: 2.5rem
+						left: 2.5rem
+				button
+					width: 2.5rem
+					height: 2.5rem
+			+sml(max-w)
+				&.horiz
+					width: 16rem
+					height: 5rem
+					input[type=number]
+						width: 6rem
+						height: 5rem
+						left: 5rem
+				button
+					width: 5rem
+					height: 5rem
+	&-title
+		+cfx
+		margin-bottom: .5em
+		display: table
+		img
+			display: table-cell
+			margin-right: 0.5em
+			width: 3.3em
+		span
+			display: table-cell
+			vertical-align: top
+			font-size: 1.4em
+			line-height: 1.2
+	&-result
+		background-color: lighten($orange,20%)
+		font-family: $o-sb
+		font-size: 3em
+		margin: 0.2em 0 0.7em
+		width: 100%
+		text-align: center
+		display: block
+		padding: 0.5em .5em
+	&-attention
+		font-size: 1.5em
+		line-height: 1.4em
+		a
+			color: $black
+			text-decoration: underline
+			+hov-a(underline,$orange)
+	&-one
+	&-two
+		.calculator-contain
+			margin-left: -1em
+			margin-right: -1em
+			padding-left: 1em
+			padding-right: 1em
+			border-left: .2em dotted lighten($gray,25%)
+			border-right: .2em dotted lighten($gray,25%)
+			+sml(max-w)
+				margin: 0
+				border: none
+				padding: 0
+	.tarif
+		width: 100%
+		margin: 2.5em 0 0
+		+cfx
+		display: table
+		p
+			display: table-cell
+			vertical-align: middle
+			font-size: 1.4em
+		.select
+			display: table-cell
+			vertical-align: middle
+			min-width: 10em
+			+sm(max-w)
+				min-width: 11em
+.yet
+	width: 90%
+	margin: 1.5em auto
+	text-align: center
+	+md(max-w)
+		width: 97%
+	+sm(max-w)
+		width: 100%
+	&-top
+		background-color: #eeeeee
+		padding: 1em 0
+		margin-bottom: 1.5em
+		a
+			display: block
+			+hov1
+		img
+			width: 25em
+	&-bottom
+		strong
+			font-family: $o-sb
+			font-size: 1.8em
+			font-weight: normal
+			display: block
+			margin-bottom: .5em
+		p
+			text-align: left
+			font-family: $o-l
+			font-size: 1.5em
+			line-height: 1.1
+.rates
+	color: $white
+	text-align: center
+	background-color: transparentize($black,.2)
+	padding: 3em 4em 4em
+	+md(max-w)
+		padding: 2em 2em 3em
+	+sml(max-w)
+		margin-bottom: 2em
+	h3
+		font-family: $o-sb
+		color: $orange
+		font-size: 2.8em
+	strong
+		font-family: $o-sb
+		display: block
+		margin: 0.5em 0
+		font-size: 2em
+	ul
+		font-family: $o-l
+		text-align: left
+		height: 33em
+		overflow: hidden
+		margin-bottom: 1.5em
+		+md(max-w)
+			height: 35em
+		+sml(max-w)
+			height: 27em
+	li
+		font-size: 1.3em
+		margin-bottom: 1em
+		line-height: 1.4
+	.label
+		@extend %label
+		@extend %label-warning
+		font-size: 1.4em
+		margin: 0.5em 0 1.4em
+	.btn
+		@extend %btn
+		@extend %btn-warning
+		width: 100%
+		font-size: 1.4em
+		padding: 1em .5em
+.what
+	+cfx
+	margin-bottom: 2em
+	&-left
+		float: left
+		margin-right: 7%
+		width: 18%
+		img
+			width: 100%
+	&-right
+		float: left
+		width: 75%
+	strong
+		font-family: $o-sb
+		font-size: 1.6em
+		display: block
+		margin-bottom: 0.4em
+	p
+		font-family: $o-l
+		line-height: 1.3
+		font-size: 1.3em
+.line-partners
+	.slider-thr.bee
+		+md(max-w)
+			font-size: 1vw
+		+sm(max-w)
+			font-size: 1.2vw
+		+sml(max-w)
+			font-size: 1.5vw
+		&.owl-carousel
+			margin: 0 0 2.5em
+			.item
+				img
+					margin-bottom: .5em
+	.partners
+		a
+			display: block
+			font-size: 3.1em
+		img
+			width: 100%
+.clients
+	&-group1, &-group2
+		+cfx
+		li
+			float: left
+			display: table
+			text-align: center
+			margin-bottom: 1em
+		a
+			display: table-cell
+			vertical-align: middle
+			height: 7em
+			+hov1
+		img
+			max-width: 10em
+			+sm(max-w)
+				width: 7em
+	&-group1
+		li
+			width: 16.66666%
+			&:nth-child(6n+6)
+				text-align: right
+			&:nth-child(6n+1)
+				text-align: left
+			+md(max-w)
+				width: 25%
+				&:nth-child(6n+6)
+					text-align: center
+				&:nth-child(6n+1)
+					text-align: center
+				&:nth-child(4n+4)
+					text-align: right
+				&:nth-child(4n+1)
+					text-align: left
+			+sml(max-w)
+				width: 33.3333%
+				&:nth-child(4n+4)
+					text-align: center
+				&:nth-child(4n+1)
+					text-align: center
+				&:nth-child(3n+3)
+					text-align: right
+				&:nth-child(3n+1)
+					text-align: left
+	&-group2
+		+md(max-w)
+			display: none
+		li
+			width: 20%
+			&:nth-child(5n+5)
+				text-align: right
+			&:nth-child(5n+1)
+				text-align: left
+			+md(max-w)
+				width: 25%
+				&:nth-child(5n+5)
+					text-align: center
+				&:nth-child(5n+1)
+					text-align: center
+				&:nth-child(4n+4)
+					text-align: right
+				&:nth-child(4n+1)
+					text-align: left
+.slider-two
+	width: 100%
+	margin: 3em 0 10em
+	+md(max-w)
+		font-size: 1.3vw
+	+sml(max-w)
+		font-size: 1.7vw
+	.customNavigation 
+		.btn 
+			color: $white
+			top: 1.7em
+			font-size: 5em
+			+md(max-w)
+				top: 1.5em
+			+sml(max-w)
+				top: 1.2em
+	.owl-carousel
+		.item
+			width: 80%
+			margin: 0 auto
+			+cfx
+			+md(max-w)
+				width: 90%
+			+sm(max-w)
+				width: 95%
+			img
+				width: 100%
+			&-left
+				float: left
+				width: 39%
+			&-right
+				float: right
+				width: 51%
+				text-align: left
+				margin-top: 5.2em
+				+md(max-w)
+					width: 59%
+					margin-top: 4em
+				+sm(max-w)
+					margin-top: 3em
+				p
+					font-family: $o-li
+					font-size: 1.625em
+					margin-bottom: 0.7em
+					line-height: 1.4
+					color: $white
+.advantages
+	text-align: center
+	&-one
+		color: $black
+		margin-bottom: 3em
+		+md(max-w)
+			font-size: 1.5vw
+		+sml(max-w)
+			font-size: 2.5vw
+		img
+			width: 8em
+		strong
+			font-family: $o-sb
+			font-size: 1.7em
+			display: block
+			margin-bottom: 0.5em
+		p
+			font-family: $o-l
+			font-size: 1.3em
+			line-height: 1.3
+	&-top
+		min-height: 15em
+		+md(max-w)
+	&-bottom
+		text-align: left
+.slider-three
+	+sm(max-w)
+		font-size: 1.7vw
+	&.owl-carousel
+		margin: 4.5em auto 5.5em
+		width: 100%
+		.item
+			img
+				width: 8em
+				margin-bottom: 3em
+			i
+				display: inline-block
+				font-weight: normal
+				font-style: normal
+				text-align: center
+				font-family: $o-li
+				font-size: 1.5em
+	.owl-controls
+		.owl-buttons
+			div
+				background: none
+				margin: 0
+				padding: 0
+				font-size: 5em
+				top: 40%
+				bottom: 60%
+				line-height: 0
+				vertical-align: top
+				color: $gray
+	.owl-prev
+		position: absolute
+		left: 0
+		&:before
+			content: '\f104'
+			font-family: 'FontAwesome'
+	.owl-next
+		position: absolute
+		right: 0
+		&:before
+			content: '\f105'
+			font-family: 'FontAwesome'
+	.owl-buttons
+		+sm(min-w)
+			display: none
+	.col-xs-4
+		.advantages
+			text-align: center
+			display: inline-block
+			+md(max-w)
+				display: block
+		&:first-child
+			text-align: left
+		&:nth-child(2)
+		&:last-child
+			text-align: right
+.comand-title
+	background-color: transparentize($gray,.5)
+	margin-top: 26.4em
+	color: $white
+	font-family: $o-li
+	font-size: 1.125em
+	+md(max-w)
+		font-size: 2vw
+		margin-top: 15em
+	+sm(max-w)
+		margin-top: 12em
+	+sml(max-w)
+		font-size: 3vw
+		margin-top: 10em
+	p
+		margin: 1.7em 0
+		line-height: 1.7
+		+md(max-w)
+			margin: 1em 0
+	.container-fluid
+		width: 65%
+		+md(max-w)
+			width: 95%
+
+.mission
+	&-left
+		float: left
+		width: 60%
+		+md(max-w)
+			width: 100%
+			float: none
+		p
+			font-size: .875em
+			margin-bottom: 1.9em
+			line-height: 1.6
+	&-right
+		float: right
+		position: relative
+		width: 35%
+		border: .1em solid $orange
+		text-align: center
+		padding: 3.7em 1.9em 1.5em
+		+md(max-w)
+			width: 90%
+			margin: 0 auto 2em
+			float: none
+			display: none
+		+sml(max-w)
+			width: 80%
+		strong
+			font-family: $o-sb
+			font-size: 1.75em
+			display: block
+			margin-bottom: 1em
+		p
+			text-align: left
+			line-height: 1.45
+		img
+			position: absolute
+			background: $white
+			padding: 0 .5em
+			top: -2.3em
+			width: 20%
+			left: 40%
+			right: 40%
+			+md(max-w)
+				width: 10%
+				left: 45%
+				right: 45%
+			+sm(max-w)
+				top: -2.5em
+				width: 20%
+				left: 45%
+				right: 45%
+			+sml(max-w)
+				top: -1.8em
+				width: 15%
+				left: 42.5%
+				right: 42.5%
+	&-top
+		display: none
+		+md(max-w)
+			display: block
+.dropdown-menu
+	position: relative
+	top: -.1em
+	margin-bottom: .3em
+	+sml(max-w)
+		margin-bottom: -0.7em
+.Dropdown
+	cursor: pointer
+	padding-left: 2.5em
+	overflow: hidden
+	font-size: 0.8em
+	+sml(max-w)
+		padding-left: 0
+		font-size: 5vw
+	&-profile
+		position: relative
+		display: none
+		color: $white
+		+sml(max-w)
+			display: block
+			padding-left: 1em
+			outline: none
+			width: 9em
+			padding: 0.8em 0 1em 1em
+			i
+				font-size: 1.5em
+				position: relative
+				top: 0.4em
+				left: 0.5em
+		.caretup
+			display: none
+			position: absolute
+			right: -.22em	
+			bottom: -.42em
+			+caret-t(transparentize($black,0.4),transparentize($white,0.5),1em,0.85em,.15em)
+	&-nav
+		overflow: hidden
+		+transition(height 0.2s $ease-out-expo)
+		+sml(max-w)
+			height: 0
+			background-color: transparentize($black,.6)
+		ul
+			+cfx
+			list-style: none
+			margin: 0
+			padding: 0
+		li
+			position: relative
+			float: left
+			+sml(max-w)
+				float: none
+		li a
+			color: $white
+			display: inline-block
+			padding: 0.7em
+			border: .15em solid transparent
+			+br(.4em)
+			+hov-a(none,$white)
+			&:hover,&:focus
+				border-color: $white
+			+sml(max-w)
+				border: none
+				display: block
+				padding: 0.7em 1em
+				border-top-width: .05em
+				border-bottom-width: .05em
+				border-style: solid
+				border-color: transparentize($white,0.7)
+				+br(0)
+				+transit
+				&:hover
+					background-color: transparentize($black,.4)
+					border-color: transparentize($black,0.7)
+		li
+			&:first-child
+				+sml(max-w)
+					a
+						border-top: none
+			&:last-child
+				+sml(max-w)
+					a
+						border-bottom: none
+
+
+		li .OptionLink
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			height: 22px
+			font-size: 18px
+			margin: auto
+			z-index: 5
+	&.is-expanded nav
+		height: auto
+	&.is-expanded
+		+transit
+		.Dropdown-nav
+			+sml(max-w)
+				border-top: .12em solid transparentize($white,0.5)
+				border-bottom: .12em solid transparentize($white,0.5)
+		.caretup
+			display: block
+.Dropdown-group
+.Dropdown.is-expanded .MenuIcon
+	&-line:nth-child(1)
+		top: 50%
+	&-line:nth-child(3)
+		top: 50%
+.MenuIcon
+	bottom: 0
+	top: 0
+	margin: auto
+	position: absolute
+	&-line
+		background: #49bcbe
+		display: inline-block
+		height: 2px
+		margin: auto
+		position: absolute
+		width: 100%
+		+transition(all 0.2s ease-in-out)
+		&:nth-child(1)
+			top: 0
+		&:nth-child(2)
+			top: 50%
+		&:nth-child(3)
+			top: 100%
+.request
+	color: #000
+	width: 50%
+	margin: 0 auto
+	+cfx
+	+md(max-w)
+		width: 90%
+	+sm(max-w)
+		width: 100%
+	+sml(max-w)
+		font-size: 3.5vw
+	&-left
+		float: left
+		width: 50%
+		+sml(max-w)
+			width: 100%
+			float: none
+	&-right
+		float: right
+		width: 50%
+		text-align: center
+		+sml(max-w)
+			width: 100%
+			float: none
+			margin-bottom: 3em
+		img
+			margin-bottom: -.2em
+			width: 15em
+			+sm(max-w)
+				width: 10em
+			+sml(max-w)
+				width: 15em
+		p
+			background-color: #f37831
+			width: 90%
+			margin: 0 auto
+			position: relative
+			+br(1.3em)
+			padding: 2em 1.5em
+		strong
+			font-family: $p-sb
+			font-size: 1.313em
+			display: block
+			margin-bottom: 0.6em
+		i
+			font-style: normal
+			font-size: 1.125em
+			font-family: $p-xti
+			line-height: 1.5
+			text-align: left
+			display: block
+	.form
+		&-group
+			font-family: $p-xt
+			position: relative
+			font-size: .875em
+			margin-bottom: 1.5em
+			input
+				@extend %input
+				width: 100%
+			textarea
+				@extend %input
+				width: 100%
+				height: 6em
+			label
+				display: block
+				&.error
+					padding-top: 1.4em
+					span
+						&:first-child
+							display: none
+						&:last-child
+					input
+						border-color: $red1
+			span
+				display: block
+				margin-bottom: .5em
+				position: relative
+				&:last-child
+					position: absolute
+					top: 0
+					left: 0
+					color: $red1
+			sup
+		&-btn
+			.btn
+				@extend %btn
+				@extend %btn-warning
+				width: 11.5em
+.reviews
+	+cfx
+	&-one
+		+sml(max-w)
+			margin-bottom: 4em
+	&-two
+	.round
+		float: left
+		a
+			background-color: #fff
+			+round(9.5em,.3em)
+			+sml(max-w)
+				+round(11em,.3em)
+
+		img
+			width: 90%
+	p
+		float: right
+		position: relative
+		height: 13em
+		overflow: hidden
+		width: 19em
+		+sml(max-w)
+			float: left
+			margin-left: 1em
+			width: 18em
+	span
+		font-family: $p-t
+		font-size: 1.094em
+		line-height: 1.2
+		display: block
+		margin-bottom: 1em
+	strong
+		font-family: $p-r
+		font-size: 1.25em
+		position: absolute
+		bottom: 0
+		left: 0
+
+.owl
+	&-carousel
+		width: 90%
+		margin: 0 auto
+		.item
+			text-align: center
+			a
+				+hov1
+			img
+				width: 12em
+	&-item
+	&-controls
+.customNavigation
+	.btn
+		position: absolute
+		color: $black
+		font-size: 4em
+		top: 0.1em
+		cursor: pointer
+		+transit
+		&:hover
+			color: lighten($black,40%)
+		&.next, &.next1
+			right: 0
+		&.prev, &.prev1
+			left: 0
+.file-upload
+	position: relative
+	overflow: hidden
+	text-transform: uppercase
+	font-size: 2em
+	margin-left: .2em
+	color: $orange
+	text-shadow: none
+	display: inline-block
+	vertical-align: middle
+
+.file-upload input.upload
+	position: absolute
+	top: 0
+	right: 0
+	margin: 0
+	padding: 0
+	font-size: .7em	
+	cursor: pointer
+	opacity: 0
+	filter: alpha(opacity = 0)
+
+#fileuploadurl
+	display: inline-block
+	border: none
+	vertical-align: middle
+	background: none
+	box-shadow: none
+	font-size: .7em
+	padding-left: 0
+	padding-right: 0
+// tile
+.grid
+  background: #DDD
+
+.grid:after
+  content: ''
+  display: block
+  clear: both
+
+
+.grid-sizer,
+.grid-item
+  width: 16.666%
+  +md(max-w)
+  	width: 33.333%
+  +sml(max-w)
+  	width: 50%
+
+
+.grid-item
+  float: left
+
+.grid-item img
+  display: block
+  max-width: 100%
+// end tile
+
+//dropdown ul
+.select
+  position: relative
+  display: block
+  color: $black
+  font-size: 1.4em
+  vertical-align: middle
+  text-align: left
+  user-select: none
+  -webkit-touch-callout: none
+
+  .placeholder
+    position: relative
+    border-left: .1em solid $gray
+    border-right: .1em solid $gray
+    border-top: .1em solid $gray
+    border-color: transparent
+    display: block
+    background-color: #eeeeee
+    z-index: 1
+    padding: 0.75em 1em
+    border-radius: .2em
+    cursor: pointer
+
+    &:hover
+      background: darken(#eeeeee, 2%)
+
+    &:after
+      position: absolute
+      right: 0.6em
+      top: 50%
+      font-size: 2em
+      transform: translateY(-50%)
+      font-family: 'FontAwesome'
+      content: '\f0d7'
+      z-index: 10
+
+  &.is-open
+    .placeholder:after
+      content: '\f0d8'
+
+    .placeholder
+      border-color: $gray
+      +br-c(0.2em,0.2em,0,0)
+    ul
+      display: block
+      border-bottom: .1em solid $gray
+      border-left: .1em solid $gray
+      border-right: .1em solid $gray
+      +br-c(0,0,0.2em,0.2em)
+
+  &.select--white
+    .placeholder
+      background: #fff
+      color: #999
+
+      &:hover
+        background: darken(#fff, 2%)
+
+  ul
+    display: none
+    position: absolute
+    overflow: hidden
+    width: 100%
+    background: #fff
+    border-radius: 2px
+    top: 100%
+    left: 0
+    list-style: none
+    padding: 0
+    z-index: 100
+
+    li
+      display: block
+      text-align: left
+      padding: 0.8em 1em 0.8em 1em
+      color: #999
+      cursor: pointer
+
+      &:hover
+        background: lighten($orange,20%)
+        color: #fff
+.plusminus
+  $size: 4rem
+
+  //change this to change size of picker
+  $border-radius: 0.3rem
+
+  //set to 0 if not required
+  display: inline-block
+  position: relative
+  font-size: 0
+  overflow: hidden
+  border-radius: $border-radius
+  width: $size
+  height: $size * 3
+
+  button
+    display: block
+    width: $size
+    height: $size
+    position: absolute
+    margin: 0
+    padding: 0
+    border: 0
+    background: color(orange,dark)
+    color: $black
+    font-size: $size * 0.7
+    line-height: 1
+    cursor: pointer
+    +transition(color 200ms)
+    &:disabled
+      background: $gray
+      color: lighten($gray,20%)
+      cursor: default
+    &:first-child
+      bottom: 0
+      &:before
+        content: "-"
+        position: relative
+        top: -0.1em
+    &:last-child
+      top: 0
+      &:before
+        content: "+"
+      &:focus
+        color: $white
+  input[type="number"]
+    position: absolute
+    background-color: #eeeeee
+    width: $size
+    height: $size
+    top: $size
+    margin: 0
+    border: 0
+    font-size: $size * 0.4
+    font-weight: bold
+    text-align: center
+    -moz-appearance: textfield
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button
+      -webkit-appearance: none
+      margin: 0
+  &:after
+  &.horiz
+    width: $size * 3
+    height: $size
+    button
+      &:first-child
+        left: 0
+      &:last-child
+        right: 0
+    &:after
+      bottom: 0
+    input[type="number"]
+      position: absolute
+      top: 0
+      left: $size
+  &.stacked
+    width: $size * 2
+    height: $size * 2
+    border-bottom-left-radius: $border-radius
+    border-bottom-right-radius: $border-radius
+    &:after
+      width: 100%
+      bottom: 50%
+    button
+      float: none
+      top: auto
+      bottom: 0
+      &:first-child
+        left: 0
+      &:last-child
+        right: 0
+    input[type="number"]
+      top: 0
+      border-top-left-radius: $border-radius
+      border-top-right-radius: $border-radius
+      border: 1px solid #eee
+      width: 100%
+      &:after
+        width: 100%
+.tabs
+	margin: 0px
+	padding: 0px
+	list-style: none
+
+.tabs li
+	color: #222
+	cursor: pointer
+
+.tabs li.current
+	color: #222
+
+.tab-content
+	display: none
+	background: $white
+	padding: 1.5em 2em
+	img
+		width: 100%
+.tab-content
+	max-height: 23em
+
+	&.current1
+		display: inherit
+
+@import "media"

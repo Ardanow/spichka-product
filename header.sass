@@ -1,0 +1,265 @@
+@import "bourbon"
+@import "sass/template"
+@import "sass/vars"
+@import "sass/base"
+@import "app/libs/animate/animate"
+
+// #header
+#header
+	height: 100vh
+	position: fixed
+	width: 12.5em
+	z-index: 1
+	+sml(max-w)
+		width: 100%
+		height: auto
+		position: static
+	+transit
+	&.inside
+		width: 27.5em
+	.main-menu	
+		background: url("../img/menu_bg.jpg") repeat-y top left
+		background-size: 12.5em 
+		height: 100%
+		+sml(max-w)
+			display: none
+	.responsive-menu
+		background: url("../img/menu_bg.jpg") repeat
+		display: none
+		+sml(max-w)
+			display: block
+		#cssmenu
+			background-color: transparent
+			+sml(max-w)
+				font-size: 2.1vw
+			ul
+				a
+					font-family: $p-t
+					font-size: 20px
+				ul
+					a
+						font-family: $o-l
+						font-size: 17px
+			.submenu-button
+				height: 55px
+				background-color: transparent
+				&:before
+					top: 23px
+				&:after
+					top: 26px
+			.submenu-opened
+				background-color: #363636
+		.btn-group
+			width: 100%
+			margin: 0 auto
+			border-bottom: 0
+			padding: 0
+		#head-mobile
+			padding: 4.8em 0
+			margin: 0 .7em 0 2.7em
+		.button
+			height: 6.7em
+			width: 6.7em
+			right: 1em
+			top: 1em
+			border: .1em solid $white
+			+transit
+			&:before
+				border-width: .3em
+				width: 3.4em
+				height: 0.6em
+				right: 1.6em
+				left: 1.6em
+				top: 1.8em
+				background-color: $white
+			&:after
+				border-width: .3em
+				width: 3.4em
+				height: 1.8em
+				top: 3em
+				right: 1.6em
+				left: 1.6em
+				border-top-width: 0.6em
+				border-bottom-width: 0.6em
+				border-color: $white
+			&:hover
+				&:after
+					border-color: $orange
+				&:before
+					background-color: $orange
+			&.menu-opened
+				&:before
+					top: 3em
+				&:after
+					height: 0.6em
+				&:hover
+					&:after
+						background-color: $orange
+		.logo
+			height: auto
+			width: auto
+			text-align: left
+			margin: 0
+			padding: 0
+			font-size: 1.3em
+			margin: 0.5em 0
+		.contacts
+			position: absolute
+			left: 7.5em
+			right: 7.5em
+			top: 0.4em
+			font-size: 1.6em
+			a
+				color: $white
+				font-family: $o-b
+				display: block
+				margin-bottom: 0.4em
+				+hov-a(none,$orange)
+			i
+				margin-right: 0.5em
+				font-size: 1.3em
+	.sfHover
+
+	.sf-menu
+		width: 12em
+		float: none
+		font-family: $o-sb
+		color: $white
+		font-size: 1em
+		a
+			border: none
+			color: $white
+			padding: 0.95em 2em
+			&:hover
+				color: $orange
+		li
+			background-color: transparent
+			&:hover
+				background-color: transparentize($white,.8)
+		ul
+			left: 13em
+			background-color: $bl1
+			top: -4em
+			+br(0.4em)
+			li
+				a
+					font-family: $o-l
+					font-style: normal
+					padding: 0.95em 1em
+					font-size: .75em
+					&:after
+						opacity: 0
+	.current
+		>a
+			&:after
+				content: '\f0d9'
+				font-family: 'FontAwesome'
+				position: absolute
+				font-size: 2em
+				top: 0.4em
+				color: $bl1
+				right: -.1em
+				border: none
+				opacity: 0
+				+transit(all,1s,ease)
+	.sfHover
+		a
+			&:after
+				opacity: 1
+	.mCustomScrollbar 
+	.mCSB_dragger
+	.mCSB_scrollTools
+		width: 0.5em
+		right: auto
+		left: 12em
+	.mCSB_draggerContainer
+		background-color: transparentize($white,.3)
+	.mCSB_container
+		margin-right: 0.5em
+	.mCSB_draggerRail
+		width: 0.5em
+	.mCSB_dragger_bar
+		background: url("../img/range.png") no-repeat center center
+		background-size: 100%
+		width: 0.5em
+
+//-end #header
+
+.inside1
+.logo, .contact, .social-group, .btn-group
+	width: 12em
+.logo
+	text-align: center
+	margin: 1em 0 3.5em
+	a
+		display: block
+	img
+		width: 4.5em
+.btn-group
+	text-align: center
+	padding: 0 0 1.5em 0
+	border-bottom: .1em dashed $gray
+	.btn
+		@extend %btn
+		@extend %btn-warning
+.contact
+	padding: 1.5em 0 1.5em 1.6em
+	a
+		color: $white
+		font-family: $o-b
+		font-size: .813em
+		+hov-a(none,darken($orange,15%))
+	i
+		font-size: 1.4em
+		margin-right: 0.5em
+	span
+		color: $gray-t
+		display: block
+		font-size: .75em
+		margin-bottom: 0.5em
+	strong
+		font-family: $o-b
+		font-size: .75em
+		display: block
+		color: $white
+	&-one
+		margin-bottom: 0.8em
+	&-two
+		margin-bottom: 1.7em
+	&-three
+		a
+			font-family: $default-font
+			color: $gray-t
+			text-decoration: underline
+			display: block
+			margin: 0.8em 0
+.social-group
+	padding: 0 2em
+	+cfx
+	ul
+		+rul
+	li
+		float: left
+		margin-right: 0.8em
+	.circle
+		+round(2em,0.1em)
+		font-size: 1.3em
+		color: $white
+		+hov-a(none,$white)
+		+transit
+		&-face
+			&:hover
+				background-color: #092e7a
+				border-color: #092e7a
+		&-vk
+			&:hover
+				background-color: #2f4f70
+				border-color: #2f4f70
+.copyright
+	padding: 1.5em 0 1.5em 1.6em
+	margin: 2em 0
+	color: $gray-t
+	font-size: .75em
+	
+	span
+		display: block
